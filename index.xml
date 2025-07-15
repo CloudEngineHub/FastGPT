@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>FastGPT</title><link>https://doc.fastgpt.io/</link><description>Recent content on FastGPT</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><atom:link href="https://doc.fastgpt.io/index.xml" rel="self" type="application/rss+xml"/><item><title>快速了解 FastGPT</title><link>https://doc.fastgpt.io/docs/intro/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://doc.fastgpt.io/docs/intro/</guid><description>FastGPT 是一个基于 LLM 大语言模型的知识库问答系统，将智能对话与可视化编排完美结合，让 AI 应用开发变得简单自然。无论您是开发者还是业务人员，都能轻松打造专属的 AI 应用。
 🤖
 快速开始体验
-海外版：https://tryfastgpt.ai
+海外版：https://fastgpt.io
 国内版：https://fastgpt.cn
 FastGPT 的优势 link1. 简单灵活，像搭积木一样简单 🧱 link像搭乐高一样简单有趣，FastGPT 提供丰富的功能模块，通过简单拖拽就能搭建出个性化的 AI 应用，零代码也能实现复杂的业务流程。
 2. 让数据更智能 🧠 linkFastGPT 提供完整的数据智能化解决方案，从数据导入、预处理到知识匹配，再到智能问答，全流程自动化。配合可视化的工作流设计，轻松打造专业级 AI 应用。
@@ -126,7 +126,7 @@ appId: 应用的ID chatId: 当前对话的ID，测试模式下不存在。 respo
 可通过 {{key}} 来引入变量。例如：
 key value appId {{appId}} Authorization Bearer {{token}} Body link只有特定请求类型下会生效。
 可以写一个自定义的 Json，并通过 {{key}} 来引入变量。例如：
-假设有一组变量 Http 模块中的Body声明 最终得到的解析 { &amp;#34;string&amp;#34;: &amp;#34;字符串&amp;#34;, &amp;#34;number&amp;#34;: 123, &amp;#34;boolean&amp;#34;: true, &amp;#34;array&amp;#34;: [1, 2, 3], &amp;#34;obj&amp;#34;: { &amp;#34;name&amp;#34;: &amp;#34;FastGPT&amp;#34;, &amp;#34;url&amp;#34;: &amp;#34;https://tryfastgpt.</description></item><item><title>判断器</title><link>https://doc.fastgpt.io/docs/guide/dashboard/workflow/tfswitch/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://doc.fastgpt.io/docs/guide/dashboard/workflow/tfswitch/</guid><description>特点 link 可重复添加 有外部输入 触发执行 功能 link对任意变量进行IF判断，若满足条件则执行IF分支，不满足条件执行ELSE分支。
+假设有一组变量 Http 模块中的Body声明 最终得到的解析 { &amp;#34;string&amp;#34;: &amp;#34;字符串&amp;#34;, &amp;#34;number&amp;#34;: 123, &amp;#34;boolean&amp;#34;: true, &amp;#34;array&amp;#34;: [1, 2, 3], &amp;#34;obj&amp;#34;: { &amp;#34;name&amp;#34;: &amp;#34;FastGPT&amp;#34;, &amp;#34;url&amp;#34;: &amp;#34;https://fastgpt.</description></item><item><title>判断器</title><link>https://doc.fastgpt.io/docs/guide/dashboard/workflow/tfswitch/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://doc.fastgpt.io/docs/guide/dashboard/workflow/tfswitch/</guid><description>特点 link 可重复添加 有外部输入 触发执行 功能 link对任意变量进行IF判断，若满足条件则执行IF分支，不满足条件执行ELSE分支。
 上述例子中若「知识库引用」变量的长度等于0则执行IF分支，否则执行ELSE分支。
 支持增加更多的判断条件和分支，同编程语言中的IF语句逻辑相同。
 作用 link适用场景有：让大模型做判断后输出固定内容，根据大模型回复内容判断是否触发后续模块。</description></item><item><title>变量更新</title><link>https://doc.fastgpt.io/docs/guide/dashboard/workflow/variable_update/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://doc.fastgpt.io/docs/guide/dashboard/workflow/variable_update/</guid><description>特点 link 可重复添加 有外部输入 触发执行 手动配置 功能 link 更新指定节点的输出值 更新全局变量 作用 link最基础的使用场景为
@@ -271,7 +271,7 @@ type ResponseType = { success: boolean; message: string; data: any; } 数据类�
 语雀知识库支持定时同步功能，每天会不定时的扫描一次，如果文档有更新，则会进行同步，也可以进行手动同步。</description></item><item><title>Web 站点同步</title><link>https://doc.fastgpt.io/docs/guide/knowledge_base/websync/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://doc.fastgpt.io/docs/guide/knowledge_base/websync/</guid><description>该功能目前仅向商业版用户开放。
 什么是 Web 站点同步 linkWeb 站点同步利用爬虫的技术，可以通过一个入口网站，自动捕获同域名下的所有网站，目前最多支持200个子页面。出于合规与安全角度，FastGPT 仅支持静态站点的爬取，主要用于各个文档站点快速构建知识库。
 Tips: 国内的媒体站点基本不可用，公众号、csdn、知乎等。可以通过终端发送curl请求检测是否为静态站点，例如：
-curl https://doc.tryfastgpt.ai/docs/intro/ 如何使用 link1. 新建知识库，选择 Web 站点同步 link 2. 点击配置站点信息 link 3. 填写网址和选择器 link 好了， 现在点击开始同步，静等系统自动抓取网站信息即可。
+curl https://doc.fastgpt.io/docs/intro/ 如何使用 link1. 新建知识库，选择 Web 站点同步 link 2. 点击配置站点信息 link 3. 填写网址和选择器 link 好了， 现在点击开始同步，静等系统自动抓取网站信息即可。
 创建应用，绑定知识库 link 选择器如何使用 link选择器是 HTML CSS JS 的产物，你可以通过选择器来定位到你需要抓取的具体内容，而不是整个站点。使用方式为：
 首先打开浏览器调试面板（通常是 F12，或者【右键 - 检查】） link 输入对应元素的选择器 link菜鸟教程 css 选择器，具体选择器的使用方式可以参考菜鸟教程。
 上图中，我们选中了一个区域，对应的是div标签，它有 data-prismjs-copy, data-prismjs-copy-success, data-prismjs-copy-error 三个属性，这里我们用到一个就够。所以选择器是： div[data-prismjs-copy]
@@ -762,8 +762,8 @@ uid是用户的唯一凭证，将会用于拉取对话记录以及保存对话�
 🤖
 这里仅需配置根地址，无需具体到完整请求路径。
 2. 分享链接中增加额外 query link在分享链接的地址中，增加一个额外的参数: authToken。例如：
-原始的链接：https://share.tryfastgpt.ai/chat/share?shareId=648aaf5ae121349a16d62192
-完整链接: https://share.tryfastgpt.ai/chat/share?shareId=648aaf5ae121349a16d62192&amp;amp;authToken=userid12345
+原始的链接：https://share.fastgpt.io/chat/share?shareId=648aaf5ae121349a16d62192
+完整链接: https://share.fastgpt.io/chat/share?shareId=648aaf5ae121349a16d62192&amp;amp;authToken=userid12345
 这个authToken通常是你系统生成的用户唯一凭证（Token之类的）。FastGPT 会在鉴权接口的body中携带 token={{authToken}} 的参数。
 3. 编写聊天初始化校验接口 link 请求示例 鉴权成功 鉴权失败 curl --location --request POST &amp;#39;{{host}}/shareAuth/init&amp;#39; \ --header &amp;#39;Content-Type: application/json&amp;#39; \ --data-raw &amp;#39;{ &amp;#34;token&amp;#34;: &amp;#34;{{authToken}}&amp;#34; }&amp;#39; { &amp;#34;success&amp;#34;: true, &amp;#34;data&amp;#34;: { &amp;#34;uid&amp;#34;: &amp;#34;用户唯一凭证&amp;#34; } } 系统会拉取该分享链接下，uid 为 username123 的对话记录。</description></item><item><title>Docker 部署问题</title><link>https://doc.fastgpt.io/docs/faq/docker/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://doc.fastgpt.io/docs/faq/docker/</guid><description/></item><item><title>私有部署常见问题</title><link>https://doc.fastgpt.io/docs/faq/privatedeploy/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://doc.fastgpt.io/docs/faq/privatedeploy/</guid><description/></item><item><title>聊天框问题</title><link>https://doc.fastgpt.io/docs/faq/chat/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://doc.fastgpt.io/docs/faq/chat/</guid><description>我修改了工作台的应用，为什么在“聊天”时没有更新配置？ link应用需要点击发布后，聊天才会更新应用。
 浏览器不支持语音输入 link 首先需要确保浏览器、电脑本身麦克风权限的开启。 确认浏览器允许该站点使用麦克风，并且选择正确的麦克风来源。 需有 SSL 证书的站点才可以使用麦克风。</description></item><item><title>应用使用问题</title><link>https://doc.fastgpt.io/docs/faq/app/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://doc.fastgpt.io/docs/faq/app/</guid><description>多轮对话中如何使连续问题被问题分类节点正确的归类 link问题分类节点具有获取上下文信息的能力，当处理两个关联性较大的问题时，模型的判断准确性往往依赖于这两个问题之间的联系和模型的能力。例如，当用户先问“我该如何使用这个功能？”接着又询问“这个功能有什么限制？”时，模型借助上下文信息，就能够更精准地理解并响应。
@@ -868,7 +868,7 @@ FastGPT-plugin
 海外版 国内版</description></item><item><title>商业版</title><link>https://doc.fastgpt.io/docs/shopping_cart/intro/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://doc.fastgpt.io/docs/shopping_cart/intro/</guid><description>简介 linkFastGPT 商业版是基于 FastGPT 开源版的增强版本，增加了一些独有的功能。只需安装一个商业版镜像，并在开源版基础上填写对应的内网地址，即可快速使用商业版。
 功能差异 link 开源版 商业版 线上版 应用管理与高级编排 ✅ ✅ ✅ 文档知识库 ✅ ✅ ✅ 外部使用 ✅ ✅ ✅ API 知识库 ✅ ✅ ✅ 最大应用数量 500 无限制 由付费套餐决定 最大知识库数量（单个知识库内容无限制） 30 无限制 由付费套餐决定 自定义版权信息 ❌ ✅ 设计中 多租户与支付 ❌ ✅ ✅ 团队空间 &amp;amp; 权限 ❌ ✅ ✅ 应用发布安全配置 ❌ ✅ ✅ 内容审核 ❌ ✅ ✅ web站点同步 ❌ ✅ ✅ 增强训练模式 ❌ ✅ ✅ 第三方应用快速接入（飞书、公众号） ❌ ✅ ✅ 管理后台 ❌ ✅ 不需要 SSO 登录（可自定义，也可使用内置：Github、公众号、钉钉、谷歌等） ❌ ✅ 不需要 图片知识库 ❌ 设计中 设计中 对话日志运营分析 ❌ 设计中 设计中 完整商业授权 ❌ ✅ ✅ 商业版软件价格 linkFastGPT 商业版软件根据不同的部署方式，分为 3 类收费模式。下面列举各种部署方式一些常规内容，如仍有问题，可联系咨询</description></item><item><title>开源协议</title><link>https://doc.fastgpt.io/docs/agreement/open-source/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://doc.fastgpt.io/docs/agreement/open-source/</guid><description>FastGPT 项目在 Apache License 2.0 许可下开源，但包含以下附加条件：
 FastGPT 允许被用于商业化，例如作为其他应用的“后端即服务”使用，或者作为应用开发平台提供给企业。然而，当满足以下条件时，必须联系作者获得商业许可：
-多租户 SaaS 服务：除非获得 FastGPT 的明确书面授权，否则不得使用 tryfastgpt.ai 的源码来运营与 tryfastgpt.ai 服务类似的多租户 SaaS 服务。 LOGO 及版权信息：在使用 FastGPT 的过程中，不得移除或修改 FastGPT 控制台内的 LOGO 或版权信息。 请通过电子邮件 yujinlong@sealos.io 联系我们咨询许可事宜。
+多租户 SaaS 服务：除非获得 FastGPT 的明确书面授权，否则不得使用 fastgpt.io 的源码来运营与 fastgpt.io 服务类似的多租户 SaaS 服务。 LOGO 及版权信息：在使用 FastGPT 的过程中，不得移除或修改 FastGPT 控制台内的 LOGO 或版权信息。 请通过电子邮件 yujinlong@sealos.io 联系我们咨询许可事宜。
 作为贡献者，你必须同意将你贡献的代码用于以下用途：
 生产者有权将开源协议调整为更严格或更宽松的形式。 可用于商业目的，例如 FastGPT 的云服务。 除此之外，所有其他权利和限制均遵循 Apache License 2.0。如果你需要更多详细信息，可以参考 Apache License 2.0 的完整版本。本产品的交互设计受到外观专利保护。© 2023 Sealos.</description></item><item><title>服务协议</title><link>https://doc.fastgpt.io/docs/agreement/terms/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://doc.fastgpt.io/docs/agreement/terms/</guid><description>最后更新时间：2024年3月3日
 FastGPT 服务协议是您与珠海环界云计算有限公司（以下简称“我们”或“本公司”）之间就FastGPT云服务（以下简称“本服务”）的使用等相关事项所订立的协议。请您仔细阅读并充分理解本协议各条款，特别是免除或者限制我们责任的条款、对您权益的限制条款、争议解决和法律适用条款等。如您不同意本协议任一内容，请勿注册或使用本服务。

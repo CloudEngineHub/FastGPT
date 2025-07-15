@@ -55,7 +55,7 @@ type ResponseType = { success: boolean; message: string; data: any; } 数据类�
 语雀知识库支持定时同步功能，每天会不定时的扫描一次，如果文档有更新，则会进行同步，也可以进行手动同步。</description></item><item><title>Web 站点同步</title><link>https://doc.fastgpt.io/docs/guide/knowledge_base/websync/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://doc.fastgpt.io/docs/guide/knowledge_base/websync/</guid><description>该功能目前仅向商业版用户开放。
 什么是 Web 站点同步 linkWeb 站点同步利用爬虫的技术，可以通过一个入口网站，自动捕获同域名下的所有网站，目前最多支持200个子页面。出于合规与安全角度，FastGPT 仅支持静态站点的爬取，主要用于各个文档站点快速构建知识库。
 Tips: 国内的媒体站点基本不可用，公众号、csdn、知乎等。可以通过终端发送curl请求检测是否为静态站点，例如：
-curl https://doc.tryfastgpt.ai/docs/intro/ 如何使用 link1. 新建知识库，选择 Web 站点同步 link 2. 点击配置站点信息 link 3. 填写网址和选择器 link 好了， 现在点击开始同步，静等系统自动抓取网站信息即可。
+curl https://doc.fastgpt.io/docs/intro/ 如何使用 link1. 新建知识库，选择 Web 站点同步 link 2. 点击配置站点信息 link 3. 填写网址和选择器 link 好了， 现在点击开始同步，静等系统自动抓取网站信息即可。
 创建应用，绑定知识库 link 选择器如何使用 link选择器是 HTML CSS JS 的产物，你可以通过选择器来定位到你需要抓取的具体内容，而不是整个站点。使用方式为：
 首先打开浏览器调试面板（通常是 F12，或者【右键 - 检查】） link 输入对应元素的选择器 link菜鸟教程 css 选择器，具体选择器的使用方式可以参考菜鸟教程。
 上图中，我们选中了一个区域，对应的是div标签，它有 data-prismjs-copy, data-prismjs-copy-success, data-prismjs-copy-error 三个属性，这里我们用到一个就够。所以选择器是： div[data-prismjs-copy]

@@ -22,7 +22,7 @@ uid是用户的唯一凭证，将会用于拉取对话记录以及保存对话�
 🤖
 这里仅需配置根地址，无需具体到完整请求路径。
 2. 分享链接中增加额外 query link在分享链接的地址中，增加一个额外的参数: authToken。例如：
-原始的链接：https://share.tryfastgpt.ai/chat/share?shareId=648aaf5ae121349a16d62192
-完整链接: https://share.tryfastgpt.ai/chat/share?shareId=648aaf5ae121349a16d62192&amp;amp;authToken=userid12345
+原始的链接：https://share.fastgpt.io/chat/share?shareId=648aaf5ae121349a16d62192
+完整链接: https://share.fastgpt.io/chat/share?shareId=648aaf5ae121349a16d62192&amp;amp;authToken=userid12345
 这个authToken通常是你系统生成的用户唯一凭证（Token之类的）。FastGPT 会在鉴权接口的body中携带 token={{authToken}} 的参数。
 3. 编写聊天初始化校验接口 link 请求示例 鉴权成功 鉴权失败 curl --location --request POST &amp;#39;{{host}}/shareAuth/init&amp;#39; \ --header &amp;#39;Content-Type: application/json&amp;#39; \ --data-raw &amp;#39;{ &amp;#34;token&amp;#34;: &amp;#34;{{authToken}}&amp;#34; }&amp;#39; { &amp;#34;success&amp;#34;: true, &amp;#34;data&amp;#34;: { &amp;#34;uid&amp;#34;: &amp;#34;用户唯一凭证&amp;#34; } } 系统会拉取该分享链接下，uid 为 username123 的对话记录。</description></item></channel></rss>
